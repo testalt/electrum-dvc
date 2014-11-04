@@ -1,0 +1,3 @@
+electrum_ixc
+electrum_ixc_plugins
+electrum_ixc_gui

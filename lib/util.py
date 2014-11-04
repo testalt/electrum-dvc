@@ -43,13 +43,13 @@ def print_json(obj):
 
 def user_dir():
     if "HOME" in os.environ:
-        return os.path.join(os.environ["HOME"], ".electrum-ixc")
+        return os.path.join(os.environ["HOME"], ".electrum-dvc")
     elif "APPDATA" in os.environ:
-        return os.path.join(os.environ["APPDATA"], "Electrum-IXC")
+        return os.path.join(os.environ["APPDATA"], "Electrum-dvc")
     elif "LOCALAPPDATA" in os.environ:
-        return os.path.join(os.environ["LOCALAPPDATA"], "Electrum-IXC")
+        return os.path.join(os.environ["LOCALAPPDATA"], "Electrum-dvc")
     elif 'ANDROID_DATA' in os.environ:
-        return "/sdcard/electrum-ixc/"
+        return "/sdcard/electrum-dvc/"
     else:
         #raise Exception("No home directory found in environment variables.")
         return
@@ -64,17 +64,17 @@ def data_dir():
 
 
 def appdata_dir():
-    """Find the path to the application data directory; add an electrum-ixc folder and return path."""
+    """Find the path to the application data directory; add an electrum-dvc folder and return path."""
     if platform.system() == "Windows":
-        return os.path.join(os.environ["APPDATA"], "Electrum-IXC")
+        return os.path.join(os.environ["APPDATA"], "Electrum-dvc")
     elif platform.system() == "Linux":
-        return os.path.join(sys.prefix, "share", "electrum-ixc")
+        return os.path.join(sys.prefix, "share", "electrum-dvc")
     elif (platform.system() == "Darwin" or
           platform.system() == "DragonFly" or
           platform.system() == "OpenBSD" or
           platform.system() == "FreeBSD" or
 	  platform.system() == "NetBSD"):
-        return "/Library/Application Support/Electrum-IXC"
+        return "/Library/Application Support/Electrum-dvc"
     else:
         raise Exception("Unknown system")
 
@@ -176,7 +176,7 @@ def parse_URI(uri):
         return uri, None, None, None, None
 
     u = urlparse.urlparse(uri)
-    assert u.scheme == 'ixcoin'
+    assert u.scheme == 'devcoin'
 
     address = u.path
     valid_address = bitcoin.is_address(address)

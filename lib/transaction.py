@@ -585,7 +585,7 @@ class Transaction:
         else:
             assert type == 'address'
         addrtype, hash_160 = bc_address_to_hash_160(addr)
-        if addrtype == 138:
+        if addrtype == 0:
             script = '76a9'                                      # op_dup, op_hash_160
             script += push_script(hash_160.encode('hex'))
             script += '88ac'                                     # op_equalverify, op_checksig
@@ -891,7 +891,7 @@ class Transaction:
 
         for o in self.get_outputs():
             value = o[1]
-            #@todo ixcoin
+            #@todo devcoin
             if value < 1000000:
                 return True
         sum = 0

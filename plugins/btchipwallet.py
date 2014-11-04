@@ -7,17 +7,17 @@ from sys import stderr
 from time import sleep
 from base64 import b64encode, b64decode
 
-import electrum_ixc as electrum
-from electrum_ixc_gui.qt.password_dialog import make_password_dialog, run_password_dialog
-from electrum_ixc_gui.qt.util import ok_cancel_buttons
-from electrum_ixc.account import BIP32_Account
-from electrum_ixc.bitcoin import EncodeBase58Check, DecodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160
-from electrum_ixc.i18n import _
-from electrum_ixc.plugins import BasePlugin, hook
-from electrum_ixc.transaction import deserialize
-from electrum_ixc.wallet import NewWallet
+import electrum_dvc as electrum
+from electrum_dvc_gui.qt.password_dialog import make_password_dialog, run_password_dialog
+from electrum_dvc_gui.qt.util import ok_cancel_buttons
+from electrum_dvc.account import BIP32_Account
+from electrum_dvc.bitcoin import EncodeBase58Check, DecodeBase58Check, public_key_to_bc_address, bc_address_to_hash_160
+from electrum_dvc.i18n import _
+from electrum_dvc.plugins import BasePlugin, hook
+from electrum_dvc.transaction import deserialize
+from electrum_dvc.wallet import NewWallet
 
-from electrum_ixc.util import format_satoshis
+from electrum_dvc.util import format_satoshis
 import hashlib
 
 try:

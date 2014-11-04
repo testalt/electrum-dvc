@@ -1,0 +1,17 @@
+# If you want electrum to appear in a linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-dvc.desktop
+
+[Desktop Entry]
+Comment=Lightweight Devcoin Client
+Exec=electrum-dvc %u
+GenericName[en_US]=Electrum-dvc
+GenericName=Electrum-dvc
+Icon=/usr/share/app-install/icons/electrum-dvc.png
+Name[en_US]=Electrum Devcoin Wallet
+Name=Electrum Devcoin Wallet
+Categories=Network;
+StartupNotify=false
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/devcoin
+

@@ -1,12 +1,12 @@
 # Configuration file for the electrum client
 # Settings defined here are shared across wallets
 #
-# copy this file to /etc/electrum-ixc.conf if you want read-only settings
-# copy it into your ~/.electrum-ixc/ directory if you want global settings
+# copy this file to /etc/electrum-dvc.conf if you want read-only settings
+# copy it into your ~/.electrum-dvc/ directory if you want global settings
 # that can be rewritten by the client
 
 [client]
-server = electrum.ixco.in:50001:t
+server = dvc.electrum-alt.org:50007:t
 proxy = None
 gap_limit = 5
 # booleans use python syntax
@@ -14,5 +14,5 @@ use_change = True
 gui = qt
 num_zeros = 2
 # default transaction fee is in Satoshis
-fee = 10000 #@todo ixcoin fee?
+fee = 10000 #@todo devcoin fee?
 winpos-qt = [799, 226, 877, 435]

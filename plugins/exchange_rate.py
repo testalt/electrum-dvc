@@ -1,4 +1,4 @@
-#@todo ixco.in
+#@todo devco.in
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
@@ -10,10 +10,10 @@ import threading
 import time
 import re
 from decimal import Decimal
-from electrum_ixc.plugins import BasePlugin, hook
-from electrum_ixc.i18n import _
-from electrum_ixc_gui.qt.util import *
-from electrum_ixc_gui.qt.amountedit import AmountEdit
+from electrum_dvc.plugins import BasePlugin, hook
+from electrum_dvc.i18n import _
+from electrum_dvc_gui.qt.util import *
+from electrum_dvc_gui.qt.amountedit import AmountEdit
 
 
 EXCHANGES = ["Ixco.in",
@@ -54,7 +54,7 @@ class Exchanger(threading.Thread):
     def get_json(self, site, get_string):
         try:
             connection = httplib.HTTPSConnection(site)
-            connection.request("GET", get_string, headers={"User-Agent":"Electrum-IXC"})
+            connection.request("GET", get_string, headers={"User-Agent":"Electrum-dvc"})
         except Exception:
             raise
         resp = connection.getresponse()
